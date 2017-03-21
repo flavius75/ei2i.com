@@ -1,13 +1,13 @@
 function removeActive(){
-  $('a .nav-link').removeClass('active');
+  $('.sidebar li a ').removeClass('active')
 
 };
 
 
-$('.sidebar a .nav-link').click(function(){
+$('.sidebar li a ').click(function(){
 
 
   removeActive();
-  $(this).addClass('active')
+  $(this).addClass('active');
 
 });
