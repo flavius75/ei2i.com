@@ -3,7 +3,6 @@ body {
   padding-top: 4.5rem;
 }
 
-
 nav .navbar
 {
   height: 65px !important;
@@ -17,4 +16,29 @@ nav .navbar
 {
 margin-top:50px;
 
+}
+
+.news{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.news img{
+  margin-bottom: 20px;
+}
+
+
+
+
+.card{
+margin:10px 10px 10px 10px;
+min-width: 350px;
+max-width: 450px;
+max-height: 150px;
+
+}
+
+.articles{
+  display: flex;
+  flex-wrap: wrap;
 }

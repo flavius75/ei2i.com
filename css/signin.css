@@ -3,7 +3,7 @@ body {
   padding-bottom: 40px;
   background-color: #039bda;
   color:white;
-  margin-top:155px;
+  margin-top:240px;
 }
 
 .form-signin {
@@ -50,6 +50,7 @@ input
 
 .login-cover{
   display:flex;
+
   justify-content: space-around;
   margin-left: 30%;
   margin-right:30%;
@@ -62,4 +63,11 @@ input
 .container{
   width: 600px;
   margin-left:0;
+}
+
+#msg_error{
+  width: 30%;
+  margin-left: auto;
+margin-top: 50px;
+  margin-right: auto;
 }
