@@ -45,9 +45,9 @@
       <form class="form-signin " action="php/auth.php" method="post">
         <h2 class="form-signin-heading">Connectez-vous</h2>
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email"  autofocus>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email"  autofocus>
         <label for="inputPassword" class="sr-only">Mot de passe</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" >
+        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Mot de passe" >
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Se rappeler de moi

@@ -17,5 +17,3 @@ $('#docs').click(function(){
 
   $('#sections').load("docs.html")
 });
-
-// $("body").css("overflow", "hidden");

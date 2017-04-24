@@ -3791,8 +3791,8 @@ tbody.collapse.show {
   border-radius: 0.25rem;
 }
 
-.custom-file-control:lang(en)::after {
-  content: "Choose file...";
+.custom-file-control:lang(fr)::after {
+  content: "Choisir un fichier...";
 }
 
 .custom-file-control::before {
@@ -3812,7 +3812,7 @@ tbody.collapse.show {
 }
 
 .custom-file-control:lang(en)::before {
-  content: "Browse";
+  content: "Chercher";
 }
 
 .nav {

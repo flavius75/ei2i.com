@@ -1,9 +1,18 @@
 
+<?php session_start()?>
 <?php include("header.php") ?>
+
+<div class="container-fluid">
+
+  
+
+
+<div class="home_content">
+
 
 
           <div class="jumbotron">
-            <h1 class="display-3">Salut {utilisateur} !</h1>
+            <h1 class="display-3">Salut <?php echo $_SESSION['nom'] ?>!</h1>
             <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
             <hr class="my-4">
             <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
@@ -74,12 +83,12 @@
   </tbody>
 </table>
           </div>
-        </div>
+
       </div>
-    </div>
 
 
-
+</div>
+</div>
 
 <?php include("footer.php") ?>
 

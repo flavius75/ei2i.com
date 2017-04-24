@@ -5,6 +5,7 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
+  overflow-x: hidden;
 }
 
 /*
@@ -22,18 +23,24 @@ h1 {
  */
 
 .sidebar {
-  position: fixed;
-  top: 51px;
+  position:absolute;
+  top: 50px;
   bottom: 0;
-  left: 0;
+  left: -200px;
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   border-right: 1px solid #eee;
-  max-width: 12% !important;
+  max-width: 200px !important;
   background-color: #004877;
   color: white;
+  transition: transform 0.3s;
+
+}
+
+.has-sidebar .sidebar{
+  transform:translateX(200px);
 }
 
 .profile_pic{
