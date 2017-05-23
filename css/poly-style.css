@@ -1,86 +1,259 @@
 body {
   min-height: 75rem;
   padding-top: 4.5rem;
+  color: #232323;
 }
 
-nav .navbar
-{
+nav .navbar {
   height: 53px !important;
 }
 
-.navbar-brand{
+.navbar-brand {
   margin-left: 50px;
 }
 
-.jumbotron
-{
-margin-top:50px;
-
+.jumbotron {
+  margin-top: 50px;
 }
 
-.news{
+.news {
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.news img{
+.news img {
   margin-bottom: 20px;
 }
 
-
-.card{
-margin:10px 10px 10px 10px;
-min-width: 290px;
-max-width: 286px;
-max-height: 150px;
-
+.articles > .card {
+  margin: 10px 10px 10px 10px;
+  min-width: 290px !important;
+  max-width: 286px;
+  max-height: 150px;
 }
 
-.articles{
+.tile{
+  width: 500px;
+}
+
+.articles {
   display: flex;
   flex-wrap: wrap;
 }
 
 
 /* Let's get this party started */
+
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
+
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    opacity: 0.1;
-}
-
-
-::-webkit-scrollbar-track-piece{
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
   opacity: 0.1;
-
 }
+
+::-webkit-scrollbar-track-piece {
+  opacity: 0.1;
+}
+
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background:  rgba(0,72,119,0.8);
-    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(41,105,176,0.8);
+  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/
 }
+
 ::-webkit-scrollbar-thumb:window-inactive {
-	background:rgba(0,72,119,0.8);
+  background: rgba(41,105,176, 0.8);
+}
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#menu_btn img {
+  position: absolute;
+  color: white;
+  top: 12px;
+  left: 35px;
+  height: 36px;
 }
 
 
-.logo{
-  margin-left:auto;
-  margin-right:auto;
+.parallax {
+    /* The image used */
+    background-image: url("../img/docs.jpg");
+
+    /* Set a specific height */
+    height: 500px;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#menu_btn i{
-position:absolute;
+
+
+.front{
+
+text-align: center;
 color:white;
-top:12px;
-left:30px;
+padding-top: 10%;
+
+}
+
+.front button{
+  color: white;
+  border: 1px solid white;
+
+}
+
+.front button:hover{
+  color:#2969b0;
+  border-color: #2969b0;
+  background-color: none;
+}
+
+
+.identity{
+  position:absolute;
+  right:6%;
+  top: 14%;
+}
+
+.identity img{
+margin-bottom: 5px;
+}
+
+
+
+.boutton{
+  border-radius: 53px;
+    width: 43px !important;
+    background-color: #2969b0;
+}
+
+.boutton img{
+  margin-left: -7px;
+}
+
+
+
+
+/*------------------espace admin----------------*/
+
+.number {
+  border: 3px solid #292b2c;
+  font-size: 18px;
+  width: 120px;
+  height: 120px;
+  line-height: 111px;
+  border-radius: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.col.scores {
+  text-align: center;
+}
+
+.space {
+  height: 80px;
+}
+
+/*.graph{
+  display:flex;
+}*/
+
+/*#bar_chart{
+  width:60% !important;
+  height: 20% !important;
+}
+
+#pie_chart{
+  width: 28%  !important;
+  height: 20% !important;
+}*/
+
+
+.card-block a {
+  position: absolute;
+  display: block;
+  right: 20px;
+  top:37px;
+}
+
+.articles .row{
+  margin: 10px;
+}
+
+/*------------------responsive----------------*/
+
+@media screen and (max-width: 700px){
+
+  .row{
+    width:100% !important;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+
+  }
+
+  .card-block a {
+    position: absolute;
+    display: block;
+    right: 10px;
+    top:25px;
+  }
+
+  .parallax{
+    height: 200px;
+  }
+
+  .space{
+    height:30px;
+  }
+
+  .card-block{
+    padding: 10px;
+  }
+
+  .card-title{
+    margin-bottom: 4px;
+    margin-top: 5px;
+  }
+
+  .identity span{
+    display: none;
+  }
+
+  .identity {
+    position: absolute;
+    right: 7%;
+    top: 24%;
+}
+
+    #bar_chart{
+      width:100% !important;
+      height: 100% !important;
+    }
+
+    #pie_chart{
+      width: 100%  !important;
+      height: 100% !important;
+    }
+
 }

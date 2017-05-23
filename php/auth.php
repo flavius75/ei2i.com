@@ -12,13 +12,9 @@ $email= $_POST['email'];
 
 }
 
-// var_dump($pseudo);
-// exit;
 
 if (isset ($_POST['password'])){
-          // Hachage du mot de passe
           $pass = $_POST['password'];
-
 }
 
 
@@ -48,7 +44,8 @@ $resultat = $req->fetch();
 
 if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+  echo(json_encode(array('success' => false, 'data' => null)));
+    header('Location: ../index.php');
 }
 else
 {
@@ -62,8 +59,9 @@ else
     	'nom' => $_SESSION['nom']
     	));
 
+  echo(json_encode(array('success' => true, 'data' => array())));
 
-    header('Location: ../home.php');
+    // header('Location: ../home.php');
  exit();
 }
 ?>

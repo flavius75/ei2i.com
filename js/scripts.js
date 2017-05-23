@@ -1,19 +1,30 @@
-function removeActive(){
+function removeActive() {
   $('.sidebar li a ').removeClass('active')
 };
 
 
-$('.sidebar li a ').click(function(){
+$('.sidebar li a ').click(function() {
   removeActive();
   $(this).addClass('active');
 });
 
-$('#stats').click(function(){
+$('#deconnexion').click(function(e) {
 
-  $('#sections').load('stats.php')
-});
+  e.preventDefault();
 
-$('#docs').click(function(){
+  var exit = 1;
 
-  $('#sections').load("docs.html")
-});
+  $.ajax({
+    url: 'php/exit.php',
+    type: 'POST',
+    data: 'exit=' + exit,
+    dataType: 'json',
+    success: function() {
+      window.location.href = "index.php";
+    },
+    error: function() {
+      alert("Impossible de se deconnecter");
+    }
+  })
+
+})

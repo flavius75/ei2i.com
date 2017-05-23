@@ -1,31 +1,37 @@
 <?php session_start()?>
 <?php include("header.php") ?>
 
-<div class="container-fluid">
-
-    <!-- <div class="col-sm-9 offset-sm-3 col-md-12 offset-md-0" id="sections"> -->
-
-
-<div id="docs_content">
 
 
 
-  <div class="jumbotron">
-    <h1 class="display-3">Documents</h1>
-    <p class="lead">L'espace Documents permet de partager un document a l'ensemble des utilisateurs</p>
-    <hr class="my-4">
-    <p>Pour le moment l'admin est le seul utilisateur qui peut envoyer des documents</p>
-    <p class="lead">
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-        Envoyer un fichier
-      </button>
-    </p>
-  </div>
+
+<div class="parallax">
+
+
+<div class="front">
+
+
+
+<h2>Documents</h2>
+<div class="space"></div>
+
+  <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#myModal">
+    Envoyer un fichier
+  </button>
+
+</div>
+
+</div>
 
 
 <div class="front" style="height:50px;"></div>
+<div class="container-fluid">
 
+
+
+
+  <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-1" id="sections">
+<div id="docs_content">
 
 
 
@@ -68,7 +74,6 @@
 <div class="articles">
 
 
-
 <?php
 $dir    = 'docs/';
 $files = scandir($dir);
@@ -80,12 +85,15 @@ for($i;$i<$length;$i++) {
 
   ?>
   <div class="row">
-<div class="col-sm-4">
+<div class=" tile">
   <div class="card">
     <div class="card-block">
-      <h3 class="card-title"><?php echo $files[$i] ?></h3>
-      <p class="card-text"></p>
-      <a href="docs/" download="<?php echo $files[$i] ?>" class="btn btn-primary">Télécharger</a>
+      <h5 class="card-title"><?php echo $files[$i] ?></h5>
+      <p class="card-text">
+        <em>par Prenom</em>
+
+      </p>
+      <a href="docs/" download="<?php echo $files[$i] ?>" class="btn btn-primary boutton"><img src="img/Down_24px.png" alt=""></a>
     </div>
   </div>
 </div>

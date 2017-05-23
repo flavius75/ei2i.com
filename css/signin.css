@@ -1,13 +1,14 @@
 body {
-  padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #039bda;
+  background-color: #2969b0;
   color:white;
   margin-top:240px;
+  font-family: 'Raleway', Arial, sans-serif;
+
 }
 
 .form-signin {
-  max-width: 330px;
+  width: 300px;
   padding: 15px;
   margin: 0 auto;
 }
@@ -50,24 +51,54 @@ input
 
 .login-cover{
   display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  justify-content: space-around;
-  margin-left: 30%;
-  margin-right:30%;
 }
 
-.logo img{
-  margin-top: 92px;
+@media screen and (max-width: 770px){
+
+body{
+  margin-top: 0px;
 }
+
+  .logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .container
+{
+margin-top: 40px;
+  width: 100% !important;
+
+}
+
+.form-signin{
+  width:78%;
+  margin-top: -30px;
+}
+  }
+
 
 .container{
-  width: 600px;
-  margin-left:0;
+width: 700px;
 }
 
-#msg_error{
-  width: 30%;
-  margin-left: auto;
-margin-top: 50px;
-  margin-right: auto;
+
+  #alert{
+    visibility: hidden;
+  }
+
+  #login{
+    background-color: #2969b0;
+    color: white;
+    border: 1px solid white;
+  }
+
+
+.logo{
+  line-height: 255px;
 }

@@ -23,30 +23,61 @@ h1 {
  */
 
 .sidebar {
-  position:absolute;
+  position: fixed;
   top: 50px;
-  bottom: 0;
-  left: -200px;
+  bottom: 0px;
+  left: -221px;
   z-index: 1000;
   padding: 20px;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-  border-right: 1px solid #eee;
-  max-width: 200px !important;
+  box-shadow: 1px 0px 4px 0px #004877;
+  max-width: 220px !important;
   background-color: #004877;
   color: white;
   transition: transform 0.3s;
+}
 
+.nav li > a{
+  height: 65px;
+  line-height: 47px;
+}
+
+.nav li > a > img{
+  margin-right: 13px;
+  padding-bottom: 5px;
+}
+
+
+.back{
+  position: absolute;
+  height:200px;
+  z-index:-1;
+  right: 0px;
+  top:8px;
+  left:0px;
+  width:219px;
+  opacity: 0.6;
 }
 
 .has-sidebar .sidebar{
-  transform:translateX(200px);
+  transform:translateX(221px);
+}
+
+#deconnexion{
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  right:10px;
 }
 
 .profile_pic{
   margin-bottom:20px;
   margin-top: 20px;
+  height:150px;
 }
+
+
 
 .sidebar a {
   color :white;
@@ -54,8 +85,7 @@ h1 {
 }
 
 .nav-link.active{
-  background-color: white !important;
-  color:#004877 !important;
+
 }
 
 /* Sidebar navigation */

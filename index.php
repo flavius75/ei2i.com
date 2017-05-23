@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,11 +14,8 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
-
-
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
-
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,17 +27,18 @@
 
   <body>
 
-<div class="login-cover .col-md-6 .col-md-offset-3">
 
-
-<div class="logo">
-  <img src="img/logo.png" alt="logo_polytech">
-</div>
 
 
     <div class="container">
 
+      <div class="login-cover ">
 
+      <div class="logo">
+      <img src="img/upmc_svg.svg" alt="">
+
+      </svg>
+      </div>
 
       <form class="form-signin " action="php/auth.php" method="post">
         <h2 class="form-signin-heading">Connectez-vous</h2>
@@ -58,13 +56,14 @@
 
     </div> <!-- /container -->
 
+<div id="alert" class="alert alert-danger" role="alert"><b>Attention!</b> email et/ou le mot de passe sont incorrects </div>
 
 </div>
 
 
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>

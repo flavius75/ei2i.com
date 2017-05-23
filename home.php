@@ -2,9 +2,11 @@
 <?php session_start()?>
 <?php include("header.php") ?>
 
+<div class="col-sm-9 offset-sm-3 col-md-10 offset-md-1" id="sections">
+
 <div class="container-fluid">
 
-  
+
 
 
 <div class="home_content">
@@ -24,21 +26,21 @@
 
           <div class="row news">
             <div class="col-md-4 text-center">
-               <img src="User-Login-128.png" alt="User Icon" />
+               <img src="img/User-Login-128.png" alt="User Icon" />
                <p>
                  Chaque utilisateur possede un espace dedié qui lui permet d'acceder a l'ensemble des services mises a disposition par ce site.
 
                </p>
             </div>
             <div class="col-md-4 text-center" >
-               <img src="Document-Share-01-128.png" alt="Document Share" />
+               <img src="img/Document-Share-01-128.png" alt="Document Share" />
                <p>
                  Partager des documents a l'ensemble des utilisateurs devient plus facile. Un espage dédié est crée afin que chacun puisse y contribuer.
 
                </p>
             </div>
             <div class="col-md-4 text-center">
-               <img src="Calendar-Date-01-128.png" alt="Calendar Icon" />
+               <img src="img/Calendar-Date-01-128.png" alt="Calendar Icon" />
                <p>
                  Organisez votre temps avec l'outil calendrier qui integre les informations fournies par l'administrations concernant les horaires des cours.
              </p>
