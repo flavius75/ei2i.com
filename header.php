@@ -15,7 +15,7 @@
     <!-- Custom styles for this template -->
     <link href="css/poly-style.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
-        <script src="https://use.fontawesome.com/0bd560c9ea.js"></script>
+        <script nonce='okei2i' src="https://use.fontawesome.com/0bd560c9ea.js"></script>
 
 
   </head>
@@ -77,7 +77,7 @@ if($_SESSION['nom'] == "Flavius")
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="settings.php" id="settings"><img src="img/Settings_24px.png" alt=""></i>Settings</a>
+          <a class="nav-link" href="settings.php" id="settings"><img src="img/Settings_24px.png" alt=""></i>Paramètres</a>
         </li>
 
 <?php

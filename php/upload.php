@@ -40,9 +40,10 @@ try {
 }
 
 
-$req = $bdd->prepare('INSERT INTO docs(  up_title, up_filesize, up_date, up_member) VALUES( :up_title, :up_filesize, NOW(), :up_member)');
+$req = $bdd->prepare('INSERT INTO docs( up_title, up_extension, up_filesize, up_date, up_member) VALUES( :up_title, :up_extension, :up_filesize, NOW(), :up_member)');
 $req->execute(array(
 	'up_title' => $title,
+  'up_extension' => $extension_upload,
 	'up_filesize' => $taille,
 	'up_member' => $user,
 	));

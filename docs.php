@@ -31,7 +31,30 @@
 
 
   <div class="col-sm-9 offset-sm-3 col-md-10 offset-md-1" id="sections">
+
 <div id="docs_content">
+
+
+  <?php
+
+  $ini_array = parse_ini_file("config.ini");
+
+
+  try {
+
+    $db_user = $ini_array['username'];
+    $db_password = $ini_array['password'];
+    $db_name = $ini_array['dbname'];
+
+
+    $bdd = new PDO('mysql:host=localhost;dbname='.$db_name.'; charset=utf8', $db_user, $db_password);
+  } catch (Exception $e) {die('Erreur: ' .$e->getMessage());
+
+  }
+
+?>
+
+
 
 
 
@@ -75,33 +98,55 @@
 
 
 <?php
-$dir    = 'docs/';
-$files = scandir($dir);
-$length = count($files);
 
-$i=2;
+  $reponse = $bdd->query('SELECT * FROM docs ORDER BY up_id ');
 
-for($i;$i<$length;$i++) {
 
-  ?>
-  <div class="row">
+
+
+  // On affiche chaque entrée une à une
+  while ($donnees = $reponse->fetch())
+  {
+
+if($donnees['up_extension'] == "c" || $donnees['up_extension']== "asm")
+{ $icon="img/Source Code_24px.png";}
+
+else  if($donnees['up_extension']== "txt" || $donnees['up_extension']== "odf" ||$donnees['up_extension']== "doc" || $donnees['up_extension']=="docx" || $donnees['up_extension']=="pdf" )
+{ $icon="img/Document_24px.png"; }
+
+else if ($donnees['up_extension']== "jpg"|| $donnees['up_extension']=="JPG" || $donnees['up_extension']== "png" || $donnees['up_extension']== "PNG" )
+{   $icon="img/Picture_24px.png";  }
+
+
+
+?>
+
+<div class="row">
 <div class=" tile">
+
   <div class="card">
+
+<div class="cote" ><img src="<?php echo $icon?>" alt=""></div>
+
     <div class="card-block">
-      <h5 class="card-title"><?php echo $files[$i] ?></h5>
+
+      <h5 class="card-title"><?php echo $donnees['up_title'].".". $donnees['up_extension'] ?></h5>
       <p class="card-text">
-        <em>par Prenom</em>
+        <em>par<?php echo " ".$donnees['up_member']?></em>
 
       </p>
-      <a href="docs/" download="<?php echo $files[$i] ?>" class="btn btn-primary boutton"><img src="img/Down_24px.png" alt=""></a>
+      <a href="docs/" download="<?php echo $donnees['up_title'].".". $donnees['up_extension'] ?>" class="btn btn-primary boutton"><img src="img/Down_24px.png" alt=""></a>
     </div>
   </div>
 </div>
 </div>
+
+
   <?php
 }
+  ?>
 
-?>
+
 </div>
 </div>
 
@@ -110,7 +155,7 @@ for($i;$i<$length;$i++) {
 
 <?php include("footer.php") ?>
 
-<script type="text/javascript">
+<script nonce='okei2i' type="text/javascript">
   $(document).ready(function(){
     removeActive();
     $("#docs").addClass('active')

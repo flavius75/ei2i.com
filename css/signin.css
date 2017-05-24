@@ -37,7 +37,7 @@ body {
   border-bottom-left-radius: 0;
 }
 .form-signin input[type="password"] {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -46,7 +46,7 @@ body {
 
 input
 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .login-cover{
@@ -92,7 +92,16 @@ width: 700px;
     visibility: hidden;
   }
 
-  #login{
+
+ #inscript
+ {
+   background-color: #2969b0;
+   color: white;
+   border: 1px solid white;
+ }
+
+
+  #login, #inscript{
     background-color: #2969b0;
     color: white;
     border: 1px solid white;

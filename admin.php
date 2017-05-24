@@ -35,16 +35,10 @@ if($_SESSION['nom'] != "Flavius"){
 
 <div class="container-fluid">
 
-  <div class="jumbotron">
-    <h1 class="display-2">Salut Administrateur</h1>
-    <p class="lead">Tu peux retrouver ici l'ensemble des informations necessaires a  propos du site ei2i.fr</p>
-  </div>
 
-  <div class="space"></div>
+<div class="space"></div>
 
-  <div class="row">
-     <div class="col scores">
-       <div class="number">
+
 
 <?php
 $taille_totale= 0;
@@ -76,34 +70,41 @@ $nb_members= $reponse -> fetch();
 
   ?>
 
-         <b><?php echo $entry[0] ?></b>
-       </div>
-       Connexions
-     </div>
-     <div class="col scores">
-       <div class="number">
-         <b><?php echo $nb_docs[0] ?></b>
-       </div>
-       Documents partagés
-     </div>
-     <div class="col scores">
-       <div class="number">
-         <b><?php echo $taille_totale." ".$unit  ?></b>
-       </div>
-       Taille des documents
-     </div>
-     <div class="col scores">
-       <div class="number">
-         <b><?php echo $nb_members[0] ?></b>
-       </div>
-      Membres inscrits
-     </div>
-   </div>
+<div class="admin_panel">
+
+<div class="admin_mini">
+
+
+<div class="admin_bloc" id="bloc1">
+<h4>Connexions</h4>
+<h2><b><?php echo $entry[0] ?></b></h2>
+</div>
+
+<div class="admin_bloc" id="bloc2">
+<h4>Documents partagés</h4>
+<h2><b><?php echo $nb_docs[0] ?></b></h2>
+</div>
+
+</div>
+
+<div class="admin_bloc grand" id="bloc3">
+<h4>Taille des documents</h4>
+
+<h2><b><?php echo $taille_totale." ".$unit  ?></b></h2>
+</div>
+
+<div class="admin_bloc grand" id="bloc4">
+<h4>Membres inscrits</h4>
+<h2><b><?php echo $nb_members[0] ?></b></h2>
+
+</div>
+</div>
+
    <div class="space"></div>
 
 <div class="graph">
 
-<canvas  id="bar_chart" width="400" height="200" ></canvas>
+<canvas  id="bar_chart" width="700" height="200" ></canvas>
 <canvas  id="pie_chart"></canvas>
 
 </div>
@@ -124,8 +125,6 @@ $nb_members= $reponse -> fetch();
 <tbody>
 
 <?php
-
-// On récupère tout le contenu de la table jeux_video
 $reponse = $bdd->query('SELECT * FROM connections ORDER BY ID DESC LIMIT 0, 5');
 
 // On affiche chaque entrée une à une
@@ -161,14 +160,19 @@ $heure_co = substr($date_base, 11, -3);
 </div>
   <?php include("footer.php") ?>
 
-  <script type="text/javascript">
+  <script nonce='okei2i' type="text/javascript">
     $(document).ready(function(){
       removeActive();
-      $("#").addClass('active')
+      $("#").addClass('active');
+
+
+
+
+
     });
 
   </script>
 
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-  <script type="text/javascript" src="js/chart.js"></script>
+  <script nonce='okei2i' type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script nonce='okei2i' type="text/javascript" src="js/chart.js"></script>

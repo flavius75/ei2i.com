@@ -14,8 +14,15 @@ $email= $_POST['email'];
 
 
 if (isset ($_POST['password'])){
-          $pass = $_POST['password'];
+          $pass =sha1($_POST['password']);
 }
+
+
+// $pass1=sha1("password");
+// $pass2=sha1("password");
+//
+// var_dump($pass1);
+// var_dump($pass2);
 
 
 
@@ -33,6 +40,8 @@ try {
 } catch (Exception $e) {die('Erreur: ' .$e->getMessage());
 
 }
+
+
 
 // Vérification des identifiants
 $req = $bdd->prepare('SELECT id, nom FROM members WHERE email = :email AND password = :password');
@@ -61,7 +70,7 @@ else
 
   echo(json_encode(array('success' => true, 'data' => array())));
 
-    // header('Location: ../home.php');
+    header('Location: ../home.php');
  exit();
 }
 ?>

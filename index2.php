@@ -44,24 +44,28 @@
         <h2 class="form-signin-heading">Connectez-vous</h2>
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email"  autofocus>
+
+        <label for="inputName" class="sr-only">Nom</label>
+        <input type="text" id="inputName" name="name" class="form-control" placeholder="Nom" >
+
         <label for="inputPassword" class="sr-only">Mot de passe</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Mot de passe" >
+        <input type="password" id="inputPassword1" name="password" class="form-control" placeholder="Mot de passe" >
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
+        <input type="password" id="inputPassword2" name="password" class="form-control" placeholder="Mot de passe" >
 
-        <button type="button" class="btn btn btn-link" style="color:white"><a style="color:white" href="index2.php">Inscription</a></button>
-
-        <button class="btn btn-lg btn-primary btn-block" id="login" type="submit" >Connexion</button>
+        <button class="btn btn-lg btn-primary btn-block" id="inscript" type="submit" >Inscription</button>
       </form>
 
     </div> <!-- /container -->
 
-<div id="alert" class="alert alert-danger" role="alert"><b>Attention!</b> email et/ou le mot de passe sont incorrects </div>
+<div id="alert" class="alert alert-danger" role="alert"><b>Attention!</b> les mot de passe ne sont pas identiques</div>
 
 </div>
 
 
 
 
-<script nonce='okei2i' src="js/jquery-3.2.1.min.js"></script>
-    <script nonce='okei2i' src="js/login.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
