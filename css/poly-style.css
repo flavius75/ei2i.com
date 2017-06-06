@@ -95,7 +95,7 @@ nav .navbar {
     background-image: url("../img/docs.jpg");
 
     /* Set a specific height */
-    height: 500px;
+    height: 370px;
     width: 100%;
 
     /* Create the parallax scrolling effect */
@@ -111,7 +111,7 @@ nav .navbar {
 
 text-align: center;
 color:white;
-padding-top: 10%;
+padding-top: 8%;
 
 }
 
@@ -177,7 +177,8 @@ margin-bottom: 5px;
 
 
 .admin_bloc{
-  background-color: white;
+  padding: 10px;
+ background-color: white;
   margin: 20px;
   width: 300px;
   height: 100px;
@@ -185,31 +186,26 @@ margin-bottom: 5px;
 }
 
 .admin_bloc.grand{
-  background-color: white;
+background-color: white;
   margin: 15px;
   width: 300px;
   height: 225px;
+
 }
 
-
-#bloc3 b {
-  position: absolute;
-    top: 190px;
-    left: 400px;
+.admin_bloc h2{
+  text-align: center;
 }
 
-#bloc4 b {
-  position: absolute;
-    top: 190px;
-    left: 745px;
+.admin_bloc.grand h2{
+  margin-top: 50px;
 }
-
 
 .admin_panel{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 500px;
+  height: 300px;
 
 }
 
@@ -217,13 +213,17 @@ margin-bottom: 5px;
   position: absolute;
   display: block;
   right: 20px;
-  top:37px;
+  top:26px;
 }
 
 .articles .row{
   margin: 10px;
 }
 
+.card{
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
+    border: none;
+}
 
 .cote{
   display:block;
@@ -236,6 +236,11 @@ margin-bottom: 5px;
   border: 1px solid #2969b0;
 }
 
+.card-block{
+  padding: 10px;
+  margin-left: 80px;
+
+}
 
 .cote img{
   width:30px;
@@ -245,8 +250,13 @@ margin-bottom: 5px;
 
 
 .graph{
+  height:500px;
+  padding: 20px;
   display: flex;
+  align-content: space-around;
   flex-wrap: wrap;
+  background-color: #fdfdfb;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.2);
 }
 /*------------------responsive----------------*/
 
@@ -310,7 +320,16 @@ margin-bottom: 5px;
 }
 
 .logo
-  {margin-left: 35%;}
+  {
+    margin-left: 35%;
+  }
+
+
+  .sidebar{
+    z-index:1030;
+    top:0px;
+
+  }
 
 
 }

@@ -4,13 +4,29 @@ session_start();
 
 if ($_FILES['file']['error'] > 0) $erreur = "Erreur lors du transfert";
 
+if(!empty($_POST['title']))
+{
 $title =  $_POST['title'];
+}
 
+if(!empty($_FILES['file']['name']))
+{
 $name = $_FILES['file']['name'] ;
-$type =  $_FILES['file']['type'] ;
+}
+
+if(!empty($_FILES['file']['type']))
+
+{$type =  $_FILES['file']['type'] ; }
+
+
+if(!empty($_FILES['file']['size']))
+{
 $taille = $_FILES['file']['size'] ;
+}
 
 $user = $_SESSION['nom'];
+
+var_dump($erreur);
 
 
 //1. strrchr renvoie l'extension avec le point (« . »).
@@ -18,9 +34,13 @@ $user = $_SESSION['nom'];
 //3. strtolower met l'extension en minuscules.
 $extension_upload = strtolower(  substr(  strrchr($_FILES['file']['name'], '.')  ,1)  );
 
+if ($_FILES['file']['error'] == 0){
 
 $nom = "../docs/{$title}.{$extension_upload}";
 $resultat = move_uploaded_file($_FILES['file']['tmp_name'],$nom);
+
+
+
 if ($resultat) echo "Transfert réussi";
 
 
@@ -50,6 +70,7 @@ $req->execute(array(
 
 
 
-  header('Location: ../docs.php');
+   header('Location: ../docs.php');
 
+}
 ?>

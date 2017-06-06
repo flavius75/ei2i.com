@@ -2,28 +2,16 @@
 
 $id=0;
 $email="";
-
 $pass="";
 
 if (isset ($_POST['email'])){
-
-
-$email= $_POST['email'];
-
+  $email= $_POST['email'];
 }
 
 
 if (isset ($_POST['password'])){
-          $pass =sha1($_POST['password']);
+   $pass =sha1($_POST['password']);
 }
-
-
-// $pass1=sha1("password");
-// $pass2=sha1("password");
-//
-// var_dump($pass1);
-// var_dump($pass2);
-
 
 
 $ini_array = parse_ini_file("../config.ini");
@@ -54,7 +42,10 @@ $resultat = $req->fetch();
 if (!$resultat)
 {
   echo(json_encode(array('success' => false, 'data' => null)));
-    header('Location: ../index.php');
+
+
+var_dump($resultat);
+
 }
 else
 {
@@ -68,9 +59,10 @@ else
     	'nom' => $_SESSION['nom']
     	));
 
+
+
   echo(json_encode(array('success' => true, 'data' => array())));
 
-    header('Location: ../home.php');
  exit();
 }
 ?>

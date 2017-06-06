@@ -6,10 +6,10 @@ var data = {
     datasets: [
         {
             label: "Connexions",
-            backgroundColor: "rgba(41,105,176,0.2)",
+            backgroundColor: "rgba(41,105,176,1)",
             borderColor: "rgba(41,105,176,1)",
             borderWidth: 2,
-            hoverBackgroundColor: "rgba(41,105,176,0.4)",
+            hoverBackgroundColor: "rgba(41,105,176,1)",
             hoverBorderColor: "rgba(41,105,176,1)",
             data: [65, 59, 37, 81, 56, 55, 40],
         }

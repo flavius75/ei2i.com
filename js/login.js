@@ -15,6 +15,7 @@ $.ajax({
       window.location.href = "home.php";
     },
     error: function(data){
+      console.log("impossible de se connecter");
       $('#alert').css('visibility','visible')
     }
   })

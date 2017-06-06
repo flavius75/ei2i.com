@@ -81,8 +81,8 @@ $nb_members= $reponse -> fetch();
 </div>
 
 <div class="admin_bloc" id="bloc2">
-<h4>Documents partagés</h4>
-<h2><b><?php echo $nb_docs[0] ?></b></h2>
+<h4>Membres inscrits</h4>
+<h2><b><?php echo $nb_members[0] ?></b></h2>
 </div>
 
 </div>
@@ -94,8 +94,8 @@ $nb_members= $reponse -> fetch();
 </div>
 
 <div class="admin_bloc grand" id="bloc4">
-<h4>Membres inscrits</h4>
-<h2><b><?php echo $nb_members[0] ?></b></h2>
+<h4> Documents partagés</h4>
+<h2><b><?php echo $nb_docs[0] ?></b></h2>
 
 </div>
 </div>
@@ -163,8 +163,8 @@ $heure_co = substr($date_base, 11, -3);
   <script nonce='okei2i' type="text/javascript">
     $(document).ready(function(){
       removeActive();
-      $("#").addClass('active');
-
+      $("#admin").addClass('active');
+      // $('body').css("background-color","#093D78");
 
 
 
