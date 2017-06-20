@@ -32,7 +32,7 @@ if (!$_SESSION['nom']){
 if($_SESSION['nom'] == "Flavius")
  $_SESSION['admin'] = true;
   else
-  $_SESSION['admin'] = false
+  $_SESSION['admin'] = false;
 
 
      ?>

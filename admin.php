@@ -104,14 +104,11 @@ $nb_members= $reponse -> fetch();
 
 <div class="graph">
 
-<canvas  id="bar_chart" width="700" height="200" ></canvas>
-<canvas  id="pie_chart"></canvas>
-
 </div>
 
  <div class="space"></div>
 
-   <div class="col-md-12">
+   <div class="col-md-12 card">
 
 <table class="table">
 <thead class="thead-default">

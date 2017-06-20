@@ -16,7 +16,7 @@ var data = {
     ]
 };
 var option = {
-    responsive: false,
+    responsive: true,
 animation: {
 				duration:1000,
 
@@ -59,7 +59,7 @@ var data = {
 
 
 var options = {
-  responsive: false,
+  responsive: true,
 
 animation: {
     animationScale:true,

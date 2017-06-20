@@ -13,6 +13,7 @@
 
 
 <h2>Documents</h2>
+<h6>Un espace de partage de documents dédié</h4>
 <div class="space"></div>
 
   <button type="button" class="btn btn-outline-secondary btn-lg" data-toggle="modal" data-target="#myModal">
@@ -135,7 +136,7 @@ else if ($donnees['up_extension']== "jpg"|| $donnees['up_extension']=="JPG" || $
         <em>par<?php echo " ".$donnees['up_member']?></em>
 
       </p>
-      <a href="docs/" download="<?php echo $donnees['up_title'].".". $donnees['up_extension'] ?>" class="btn btn-primary boutton"><img src="img/Down_24px.png" alt=""></a>
+      <a href="docs/<?php echo $donnees['up_title'].".". $donnees['up_extension'] ?>" download class="btn btn-primary boutton"><img src="img/Down_24px.png" alt=""></a>
     </div>
   </div>
 </div>
